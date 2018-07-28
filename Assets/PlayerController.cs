@@ -19,7 +19,11 @@ public class PlayerController : MonoBehaviour {
         Move();
         Jump();
         //TODO4 add jumping behaviour
-	}
+        if (playerRB.position.y < -8)
+        {
+            Application.LoadLevel(0);
+        }
+    }
 
     private void Move()
     {
